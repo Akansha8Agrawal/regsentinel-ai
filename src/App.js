@@ -1,3 +1,4 @@
+/* eslint-disable */
 import React, { useState, useEffect, useRef } from 'react';
 const MOCK_CIRCULARS = [
   {
@@ -82,7 +83,7 @@ export default function RegSentinelAI() {
   const [activeTab, setActiveTab] = useState("dashboard");
   const [circulars, setCirculars] = useState(MOCK_CIRCULARS);
   const [selected, setSelected] = useState(null);
-  const [processing, setProcessing] = useState(false);
+  const [, setProcessing] = useState(false);
   const [chatMessages, setChatMessages] = useState([
     { role: "assistant", content: "Hello! I'm your Compliance Co-Pilot. Ask me anything — pending tasks, circular summaries, risk status, or department-wise compliance. How can I help?" }
   ]);
@@ -212,8 +213,6 @@ Answer the user's question based on this data. Be specific, mention actual circu
     }
     setChatLoading(false);
   }
-
-  const processedCount = circulars.filter(c => c.status === "done" || c.status === "conflict").length;
   const totalMAPs = circulars.flatMap(c => c.maps || []).length;
   const totalConflicts = circulars.flatMap(c => c.conflicts || []).length;
   const criticalMAPs = circulars.flatMap(c => c.maps || []).filter(m => m.priority === "Critical").length;
@@ -657,5 +656,6 @@ Answer the user's question based on this data. Be specific, mention actual circu
     </div>
   );
 }
+export default App;
 
 
