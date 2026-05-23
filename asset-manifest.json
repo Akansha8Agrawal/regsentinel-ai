@@ -1,0 +1,10 @@
+{
+  "files": {
+    "main.js": "/regsentinel-ai/static/js/main.864bdaab.js",
+    "index.html": "/regsentinel-ai/index.html",
+    "main.864bdaab.js.map": "/regsentinel-ai/static/js/main.864bdaab.js.map"
+  },
+  "entrypoints": [
+    "static/js/main.864bdaab.js"
+  ]
+}
